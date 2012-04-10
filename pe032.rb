@@ -17,12 +17,12 @@ def pan_digital
 end
 
 Benchmark.bm 15 do |b|
-  b.report('pan_digital') { puts "pan_digital sum => #{pan_digital}" }
+  b.report('search') { puts "search sum => #{pan_digital}" }
 end
 
 =begin
 user     system      total        real
-pan_digital
+search
 12 * 483 => 5796
 18 * 297 => 5346
 27 * 198 => 5346
@@ -33,6 +33,6 @@ pan_digital
 42 * 138 => 5796
 48 * 159 => 7632
 #<Set: {5796, 5346, 4396, 7254, 6952, 7852, 7632}>
-pan_digital sum => 45228
+search sum => 45228
   0.468000   0.000000   0.468000 (  0.488028)
 =end

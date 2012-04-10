@@ -1,7 +1,7 @@
 require 'benchmark'
 
 def accepted?(n, e)
-  n.to_s.split('').reduce(0) {|s, d| s + d.to_i**e} == n
+  n.to_s.split('').reduce(0) {|s, d| s + d.join('').to_i**e} == n
 end
 
 def max_digits(e)

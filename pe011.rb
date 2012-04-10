@@ -21,7 +21,7 @@ m =
  01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48"
 
 m = m.split("\n").collect { |line|
-  line.split(' ').collect { |n| n.to_i }
+  line.split(' ').collect { |n| n.join('').to_i }
 }
 
 r = 0

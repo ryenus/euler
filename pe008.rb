@@ -40,7 +40,9 @@ p = d - 1
 
 while i < s.length
   #~ n = s[i - p, d].to_i
-  n = (0..p).inject(1) do |r, j| r * s[i + j].to_i end
+  n = (0..p).inject(1) do |r, j| _self_ = s[i + j]
+  r * _self_.join('').to_i
+  end
   m = n if m < n
   i += 1
 end
